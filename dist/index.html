@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101118">
+  <meta name="description" content="OniDev Studio — independent games. Discover Tankful: Aquarium Shop Simulator and How to Digging Moon Together.">
+  <title>OniDev Studio — Independent games</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#games" aria-label="OniDev Studio home"><img class="studio-logo" src="assets/studio-logo.png" alt=""><span>oni<span class="brand-light">dev</span><small>INDEPENDENT GAME STUDIO</small></span></a>
+    <nav aria-label="Main navigation"><a class="active" href="#games">Games</a><a href="#team">Team</a><a href="#contacts">Contacts</a><a href="#social">Social media</a></nav>
+  </header>
+  <main>
+    <section class="screen games-screen" id="games" aria-labelledby="games-title">
+      <div class="section-intro"><div><p class="eyebrow">SMALL STUDIO. NEW WORLDS.</p><h1 id="games-title">OniDev <span>Studio</span><span class="title-period">.</span></h1></div><p class="intro-note">Independent games.<br>Made to be played together.</p></div>
+      <div class="games-grid" id="games-grid"></div>
+      <div class="section-bottom"><span>Two worlds. One independent spirit.</span><a href="#team">Meet the studio <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section class="screen team-screen" id="team" aria-labelledby="team-title">
+      <p class="eyebrow">01 / THE PEOPLE BEHIND THE GAMES</p>
+      <div class="section-layout"><div><h2 id="team-title">Small team.<br><span>Shared imagination.</span></h2><p class="section-copy">We’re OniDev Studio, an independent game studio working on Tankful: Aquarium Shop Simulator and How to Digging Moon Together.</p></div><div class="studio-panel"><span class="large-wordmark">oni<span>dev</span><i>.</i></span><div class="panel-rule"></div><p>Independent game development</p><p class="muted">From an aquarium shop to the surface of the Moon.</p><div id="team-members"></div></div></div>
+      <div class="section-bottom"><span>OniDev Studio</span><a href="#contacts">Get in touch <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section class="screen contacts-screen" id="contacts" aria-labelledby="contacts-title">
+      <p class="eyebrow">02 / SAY HELLO</p>
+      <div class="section-layout"><div><h2 id="contacts-title">Let’s start<br><span>a conversation.</span></h2><p class="section-copy">Questions about our games? Join the Tankful community. For screenshots and game artwork, download our press kits.</p></div><div class="contact-links" id="contact-links"><a class="contact-row" href="https://discord.gg/2yaQjbuj8j" target="_blank" rel="noopener noreferrer"><span><small>COMMUNITY</small>Tankful Discord</span><span aria-hidden="true">↗</span></a><a class="contact-row" href="assets/tankful-press-kit.zip" download><span><small>PRESS & CREATORS</small>Tankful press kit</span><span aria-hidden="true">↓</span></a><a class="contact-row" href="assets/moon-press-kit.zip" download><span><small>PRESS & CREATORS</small>Digging Moon press kit</span><span aria-hidden="true">↓</span></a></div></div>
+      <div class="section-bottom"><span>Thanks for stopping by.</span><a href="#social">Stay connected <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section class="screen social-screen" id="social" aria-labelledby="social-title">
+      <p class="eyebrow">03 / KEEP IN TOUCH</p><h2 id="social-title">See you<br><span>in the next world.</span></h2>
+      <div class="social-links"><a href="https://store.steampowered.com/app/5154130/Tankful_Aquarium_Shop_Simulator/" target="_blank" rel="noopener noreferrer"><small>FOLLOW THE GAME</small><span>Steam <i aria-hidden="true">↗</i></span></a><a href="https://discord.gg/2yaQjbuj8j" target="_blank" rel="noopener noreferrer"><small>JOIN THE COMMUNITY</small><span>Discord <i aria-hidden="true">↗</i></span></a><a href="https://youtu.be/Hd3sjt1mLx0" target="_blank" rel="noopener noreferrer"><small>WATCH THE TRAILER</small><span>YouTube <i aria-hidden="true">↗</i></span></a></div>
+      <footer class="section-bottom"><span>© <span id="year"></span> OniDev Studio</span><a href="#games">Back to top <span aria-hidden="true">↑</span></a></footer>
+    </section>
+  </main>
+  <dialog id="gallery" aria-labelledby="gallery-title"><div class="gallery-top"><div><p id="gallery-title"></p><span id="gallery-count"></span></div><button class="icon-button" id="gallery-close" aria-label="Close gallery">×</button></div><div class="gallery-stage"><button class="icon-button gallery-prev" aria-label="Previous screenshot">‹</button><img id="gallery-image" alt=""><button class="icon-button gallery-next" aria-label="Next screenshot">›</button></div><p class="gallery-hint">Use ← → to browse · Esc to close</p></dialog>
+</body>
+</html>

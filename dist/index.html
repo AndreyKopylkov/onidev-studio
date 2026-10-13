@@ -3,52 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090e19">
-  <meta name="description" content="Small studio. Otherworldly adventures. Discover We Dig the Moon and Tankful from OniDev Studio. Wishlist our games on Steam and join the crew.">
-  <meta property="og:title" content="OniDev Studio — We Dig the Moon">
-  <meta property="og:description" content="Grab your gear. Bring your friends. Dig into your next lunar adventure.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://oniindie.dev/assets/moon/header.webp">
-  <title>OniDev Studio — We Dig the Moon</title>
+  <meta name="theme-color" content="#101118">
+  <meta name="description" content="OniDev Studio — independent games. Discover We Dig the Moon and Tankful: Aquarium Shop Simulator.">
+  <title>OniDev Studio — Independent games</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="assets/moon/hero.webp">
   <link rel="stylesheet" href="styles.css">
   <script src="content.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#games">Skip to games</a>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="OniDev Studio home"><img class="studio-logo" src="assets/studio-logo.png" alt="" width="40" height="40"><span>oni<span class="brand-light">dev</span><small>INDEPENDENT GAME STUDIO</small></span></a>
-    <nav aria-label="Main navigation"><a href="#games">Our games</a><a href="#team">The studio</a><a href="#contacts">Get in touch</a></nav>
-    <a class="header-community" href="https://discord.gg/DyczvHPda" target="_blank" rel="noopener noreferrer">Join the crew <span aria-hidden="true">↗</span></a>
+    <a class="brand" href="#games" aria-label="OniDev Studio home"><img class="studio-logo" src="assets/studio-logo.png" alt=""><span>oni<span class="brand-light">dev</span><small>INDEPENDENT GAME STUDIO</small></span></a>
+    <nav aria-label="Main navigation"><a class="active" href="#games">Games</a><a href="#team">Team</a><a href="#contacts">Contacts</a><a href="#social">Social media</a></nav>
   </header>
   <main>
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <img class="hero-art" src="assets/moon/hero.webp" alt="Orange and purple astronauts exploring a cratered Moon beneath a UFO" width="2560" height="827" fetchpriority="high">
-      <div class="starfield" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> ONIDEV PRESENTS · YOUR NEXT ADVENTURE</p>
-        <h1 id="hero-title"><span class="sr-only">We Dig the Moon</span><img src="assets/moon/logo.webp" alt="" width="960" height="540"></h1>
-        <p class="hero-tagline">Good friends. Bad decisions.<br>A whole Moon to dig.</p>
-        <div class="hero-actions"><a class="button primary" href="https://store.steampowered.com/app/5436920/We_Dig_the_Moon/" target="_blank" rel="noopener noreferrer">Wishlist on Steam <span aria-hidden="true">↗</span></a><a class="button glass" href="#moon">Explore the game <span aria-hidden="true">↓</span></a></div>
-      </div>
-      <div class="hero-bottom"><span><i class="signal-dot" aria-hidden="true"></i> TRANSMISSION FROM ONIDEV STUDIO</span><a href="#games">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
-    </section>
-    <div class="mission-strip" aria-hidden="true"><span>BRING YOUR CREW</span><i>✦</i><span>FOLLOW YOUR CURIOSITY</span><i>✦</i><span>DIG A LITTLE DEEPER</span><i>✦</i><span>MAKE IT AN ADVENTURE</span></div>
     <section class="screen games-screen" id="games" aria-labelledby="games-title">
-      <div class="section-intro reveal"><div><p class="eyebrow">01 / MADE TO BE PLAYED TOGETHER</p><h2 id="games-title">Small studio.<br><span>Otherworldly adventures.</span></h2></div><p class="intro-note">Different worlds.<br>The same curious spirit.</p></div>
-      <div id="games-grid"></div>
+      <div class="section-intro"><div><p class="eyebrow">SMALL STUDIO. NEW WORLDS.</p><h1 id="games-title">OniDev <span>Studio</span><span class="title-period">.</span></h1></div><p class="intro-note">Independent games.<br>Made to be played together.</p></div>
+      <div class="games-grid" id="games-grid"></div>
+      <div class="section-bottom"><span>Two worlds. One independent spirit.</span><a href="#team">Meet the studio <span aria-hidden="true">↓</span></a></div>
     </section>
     <section class="screen team-screen" id="team" aria-labelledby="team-title">
-      <div class="section-layout reveal"><div><p class="eyebrow">02 / THE PEOPLE BEHIND THE WORLDS</p><h2 id="team-title">A little studio.<br><span>A lot of imagination.</span></h2><p class="section-copy">We’re OniDev Studio. We make independent games for curious people — from adventures beneath the Moon to a shop full of extraordinary fish.</p><p class="section-copy">Worlds to explore. Stories to share. Games that bring us together.</p></div><div class="studio-panel"><span class="orbit" aria-hidden="true"></span><span class="large-wordmark">oni<span>dev</span><i>.</i></span><p class="muted">Independent minds. Shared adventures.</p><div id="team-members"></div></div></div>
+      <p class="eyebrow">01 / THE PEOPLE BEHIND THE GAMES</p>
+      <div class="section-layout"><div><h2 id="team-title">Small team.<br><span>Shared imagination.</span></h2><p class="section-copy">We’re OniDev Studio, an independent game studio working on We Dig the Moon and Tankful: Aquarium Shop Simulator.</p></div><div class="studio-panel"><span class="large-wordmark">oni<span>dev</span><i>.</i></span><div class="panel-rule"></div><p>Independent game development</p><p class="muted">From an aquarium shop to the surface of the Moon.</p><div id="team-members"></div></div></div>
+      <div class="section-bottom"><span>OniDev Studio</span><a href="#contacts">Get in touch <span aria-hidden="true">↓</span></a></div>
     </section>
     <section class="screen contacts-screen" id="contacts" aria-labelledby="contacts-title">
-      <div class="section-layout reveal"><div><p class="eyebrow">03 / KEEP THE TRANSMISSION GOING</p><h2 id="contacts-title">Every adventure<br>starts with <span>a hello.</span></h2><p class="section-copy">Find your crew, share your discoveries, or talk to us about our games. Making something about them? Our press kits have the artwork and screenshots you need.</p></div><div class="contact-links" id="contact-links"></div></div>
+      <p class="eyebrow">02 / SAY HELLO</p>
+      <div class="section-layout"><div><h2 id="contacts-title">Let’s start<br><span>a conversation.</span></h2><p class="section-copy">Questions about our games? Join our game communities. For screenshots and game artwork, download our press kits.</p></div><div class="contact-links" id="contact-links"><a class="contact-row" href="https://discord.gg/DyczvHPda" target="_blank" rel="noopener noreferrer"><span><small>COMMUNITY</small>We Dig the Moon Discord</span><span aria-hidden="true">↗</span></a><a class="contact-row" href="assets/moon-press-kit.zip" download><span><small>PRESS & CREATORS</small>We Dig the Moon press kit</span><span aria-hidden="true">↓</span></a><a class="contact-row" href="https://discord.gg/2yaQjbuj8j" target="_blank" rel="noopener noreferrer"><span><small>COMMUNITY</small>Tankful Discord</span><span aria-hidden="true">↗</span></a><a class="contact-row" href="assets/tankful-press-kit.zip" download><span><small>PRESS & CREATORS</small>Tankful press kit</span><span aria-hidden="true">↓</span></a></div></div>
+      <div class="section-bottom"><span>Thanks for stopping by.</span><a href="#social">Stay connected <span aria-hidden="true">↓</span></a></div>
     </section>
-    <section class="community-banner reveal" aria-labelledby="community-title"><p class="eyebrow">THE MOON IS BETTER WITH COMPANY</p><h2 id="community-title">Your crew is waiting.</h2><p>Come for the games. Stay for the adventures.</p><a class="button primary" href="https://discord.gg/DyczvHPda" target="_blank" rel="noopener noreferrer">Join us on Discord <span aria-hidden="true">↗</span></a></section>
+    <section class="screen social-screen" id="social" aria-labelledby="social-title">
+      <p class="eyebrow">03 / KEEP IN TOUCH</p><h2 id="social-title">See you<br><span>in the next world.</span></h2>
+      <div class="social-links"><a href="https://store.steampowered.com/app/5436920/We_Dig_the_Moon/" target="_blank" rel="noopener noreferrer"><small>FOLLOW THE GAME</small><span>Steam <i aria-hidden="true">↗</i></span></a><a href="https://discord.gg/DyczvHPda" target="_blank" rel="noopener noreferrer"><small>JOIN THE COMMUNITY</small><span>Discord <i aria-hidden="true">↗</i></span></a><a href="https://youtu.be/Hd3sjt1mLx0" target="_blank" rel="noopener noreferrer"><small>WATCH THE TRAILER</small><span>YouTube <i aria-hidden="true">↗</i></span></a></div>
+      <footer class="section-bottom"><span>© <span id="year"></span> OniDev Studio</span><a href="#games">Back to top <span aria-hidden="true">↑</span></a></footer>
+    </section>
   </main>
-  <footer class="site-footer"><a class="footer-brand" href="#home">oni<span>dev</span><i>.</i></a><span>© <span id="year"></span> OniDev Studio</span><a href="#home">Back to orbit <span aria-hidden="true">↑</span></a></footer>
-  <dialog id="gallery" aria-labelledby="gallery-title"><div class="gallery-top"><div><p id="gallery-title"></p><span id="gallery-count" aria-live="polite"></span></div><button class="icon-button" id="gallery-close" aria-label="Close gallery">×</button></div><div class="gallery-stage"><button class="icon-button gallery-prev" aria-label="Previous screenshot">‹</button><img id="gallery-image" alt=""><button class="icon-button gallery-next" aria-label="Next screenshot">›</button></div><p class="gallery-hint">Use ← → to browse · Swipe on mobile · Esc to close</p></dialog>
+  <dialog id="gallery" aria-labelledby="gallery-title"><div class="gallery-top"><div><p id="gallery-title"></p><span id="gallery-count"></span></div><button class="icon-button" id="gallery-close" aria-label="Close gallery">×</button></div><div class="gallery-stage"><button class="icon-button gallery-prev" aria-label="Previous screenshot">‹</button><img id="gallery-image" alt=""><button class="icon-button gallery-next" aria-label="Next screenshot">›</button></div><p class="gallery-hint">Use ← → to browse · Esc to close</p></dialog>
 </body>
 </html>

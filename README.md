@@ -11,7 +11,7 @@ One-page indie game studio website, hosted on GitHub Pages. No build step or dep
 
 We Dig the Moon is the featured game, followed by Tankful. Its gallery uses the five approved Steam screenshots in order: `22.png`, `3.png`, `7.jpg`, `23.png`, `14.png`. Optimized WebP images and thumbnails live in `dist/assets/moon/`; the press kit includes the original screenshots and marketing artwork. `scripts/prepare-moon-assets.py` regenerates these assets from the local source folders using Pillow.
 
-The lunar theme includes drifting stars, scroll reveals, an orbit animation, and hover effects. The site respects reduced-motion preferences. Screenshot galleries support keyboard navigation, touch swipes, and Escape to close.
+The original studio theme and two-column game layout are retained, with We Dig the Moon first. The site respects reduced-motion preferences. Screenshot galleries support keyboard navigation, touch swipes, and Escape to close.
 
 ## Validation
 

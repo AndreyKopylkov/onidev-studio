@@ -16,7 +16,7 @@ window.STUDIO = {
     },
     {
       id: 'tankful', title: 'Tankful', subtitle: 'Aquarium Shop Simulator',
-      category: 'ANOTHER WORLD TO GET LOST IN', status: 'Coming soon',
+      category: 'AQUARIUM SHOP SIMULATOR', status: 'Coming soon',
       description: 'Build your aquarium shop, care for exotic fish, and grow your business. Run the shop solo or share the shift with friends in online co-op.',
       cover: 'assets/tankful/header.webp', trailer: 'https://youtu.be/Hd3sjt1mLx0',
       steam: 'https://store.steampowered.com/app/5154130/Tankful_Aquarium_Shop_Simulator/',

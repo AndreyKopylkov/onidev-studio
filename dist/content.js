@@ -6,7 +6,7 @@ window.STUDIO = {
     {
       id: 'moon', title: 'We Dig the Moon', subtitle: '',
       category: 'A LUNAR ADVENTURE', status: 'In development',
-      description: 'Grab your gear, bring your friends, and head beneath the lunar surface. Dig into the unknown, uncover colourful crystals, and make the Moon your next adventure.',
+      description: "A mining adventure for 1–4 players. Stranded on the Moon, dig for valuable ores, upgrade your gear, and repair your ship. Fight hungry creatures, uncover alien secrets, and answer to a sarcastic corporate AI. Your survival matters. The company's profit matters more.",
       cover: 'assets/moon/header.webp', trailer: '',
       steam: 'https://store.steampowered.com/app/5436920/We_Dig_the_Moon/',
       discord: 'https://discord.gg/DyczvHPda', pressKit: 'assets/moon-press-kit.zip',

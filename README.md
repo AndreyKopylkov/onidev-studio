@@ -9,7 +9,13 @@ One-page indie game studio website, hosted on GitHub Pages. No build step or dep
 - `dist/styles.css`: theme and responsive layout.
 - `dist/assets/`: local images and downloadable press kits. Add media here and reference it with a relative path.
 
-How to Digging Moon Together currently uses a gameplay gallery in place of its trailer. Add its YouTube URL, Steam URL, and Discord invite in `content.js` when available. Empty links are omitted.
+We Dig the Moon is the featured game, followed by Tankful. Its gallery uses the five approved Steam screenshots in order: `22.png`, `3.png`, `7.jpg`, `23.png`, `14.png`. Optimized WebP images and thumbnails live in `dist/assets/moon/`; the press kit includes the original screenshots and marketing artwork. `scripts/prepare-moon-assets.py` regenerates these assets from the local source folders using Pillow.
+
+The lunar theme includes drifting stars, scroll reveals, an orbit animation, and hover effects. The site respects reduced-motion preferences. Screenshot galleries support keyboard navigation, touch swipes, and Escape to close.
+
+## Validation
+
+Run `node --check dist/app.js`, `node --check dist/content.js`, and `node scripts/check-site.mjs`. GitHub Actions runs these checks before publishing the static `dist` artifact. There is no framework compilation step.
 
 ## Publishing
 

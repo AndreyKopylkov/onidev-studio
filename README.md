@@ -25,7 +25,7 @@ GitHub Pages serves the `dist` directory through the workflow in `.github/workfl
 
 ## Domain
 
-The site is served at https://crumbslinger.com (set in **Settings → Pages → Custom domain**). DNS for crumbslinger.com and oniindie.dev is on Cloudflare: crumbslinger.com points to GitHub Pages (DNS only), and oniindie.dev 301-redirects to crumbslinger.com via a Cloudflare Redirect Rule.
+The site is served at https://crumbslinger.com (set in **Settings → Pages → Custom domain**). DNS for crumbslinger.com and oniindie.dev is on Cloudflare: crumbslinger.com points to GitHub Pages through the Cloudflare proxy (SSL mode Full, Always Use HTTPS on; GitHub never issued its own certificate), and oniindie.dev 301-redirects to crumbslinger.com via a Cloudflare Redirect Rule.
 
 ## Preview
 

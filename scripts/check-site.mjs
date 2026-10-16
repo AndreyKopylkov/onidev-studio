@@ -19,6 +19,7 @@ for (const asset of assets) {
   const path = resolve(root, asset);
   if (!existsSync(path) || !statSync(path).size) throw new Error(`Missing or empty asset: ${asset}`);
 }
-if (games[0].id !== 'moon' || games[0].screenshots.length !== 5) throw new Error('We Dig the Moon must lead with five approved screenshots.');
+if (games[0].id !== 'moon') throw new Error('We Dig the Moon must be the first game.');
+for (const game of games) if (game.thumbnails && game.thumbnails.length !== game.screenshots.length) throw new Error(`${game.title}: screenshots and thumbnails differ.`);
 if (/How to Digging|OniDev/.test(html + JSON.stringify(games))) throw new Error('Outdated game or studio name.');
 console.log(`Site ready: ${games.length} games, ${assets.size} local files verified.`);

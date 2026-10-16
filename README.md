@@ -11,7 +11,7 @@ One-page website for Crumbslinger, a one-person indie game studio, hosted on Git
 
 The top of the page is a layered parallax hero for We Dig the Moon (`dist/assets/hero/`), followed by the studio games list. `scripts/prepare-crumbslinger-assets.py` regenerates the hero layers, studio logo, favicon and team photo from the `../We Dig the Moon` and `../Studio Crumbslinger` source folders (run with Pillow, e.g. `uv run --with pillow python scripts/prepare-crumbslinger-assets.py`). The We Dig the Moon press kit is hosted on Google Drive.
 
-The We Dig the Moon gallery uses the five approved Steam screenshots in order: `22.png`, `3.png`, `7.jpg`, `23.png`, `14.png`. Optimized WebP images and thumbnails live in `dist/assets/moon/`.
+The We Dig the Moon gallery uses the numbered screenshots (`1.png`, `2.jpg`, …) from `../We Dig the Moon` in numeric order; the same script converts them into `dist/assets/moon/screenshot-N.webp` and `thumb-N.webp`. Update the screenshot count in `dist/content.js` when it changes.
 
 The site respects reduced-motion preferences. Screenshot galleries support keyboard navigation, touch swipes, and Escape to close.
 

@@ -16,9 +16,8 @@ window.STUDIO = {
       steam: 'https://store.steampowered.com/app/5436920/We_Dig_the_Moon/',
       discord: 'https://discord.gg/DyczvHPda',
       pressKit: 'https://drive.google.com/drive/folders/1sqNcdDFJzDMRJmg5gCC0Cc3yV6TiRRjZ?usp=sharing',
-      screenshots: Array.from({ length: 5 }, (_, i) => `assets/moon/screenshot-${i + 1}.webp`),
-      thumbnails: Array.from({ length: 5 }, (_, i) => `assets/moon/thumb-${i + 1}.webp`),
-      captions: ['Your next stop: the Moon', 'Better with your crew', 'A little lunar chaos', 'Go deeper. Find something extraordinary.', 'Your suit. Your colours.']
+      screenshots: Array.from({ length: 7 }, (_, i) => `assets/moon/screenshot-${i + 1}.webp`),
+      thumbnails: Array.from({ length: 7 }, (_, i) => `assets/moon/thumb-${i + 1}.webp`)
     },
     {
       id: 'tankful', title: 'Tankful', subtitle: 'Aquarium Shop Simulator',

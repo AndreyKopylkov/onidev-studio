@@ -20,6 +20,16 @@ save(Image.open(moon / 'Back astronaut.png'), 'hero/astronaut-back.webp', 760)
 save(Image.open(moon / 'UFO.png'), 'hero/ufo.webp', 420)
 save(Image.open(moon / 'Game Name.png'), 'hero/title.webp', 1100, 90)
 
+# Gallery: numbered screenshots in the source folder, in numeric order. Old ones are removed first.
+for old in (out / 'moon').glob('*.webp'):
+    if old.name.startswith(('screenshot-', 'thumb-')): old.unlink()
+shots = sorted((p for p in moon.iterdir() if p.stem.isdigit() and p.suffix.lower() in ('.png', '.jpg', '.jpeg')), key=lambda p: int(p.stem))
+for i, shot in enumerate(shots, 1):
+    im = Image.open(shot).convert('RGB')
+    save(im, f'moon/screenshot-{i}.webp', 1920, 84)
+    save(im, f'moon/thumb-{i}.webp', 480, 80)
+print(f'{len(shots)} screenshots:', ', '.join(p.name for p in shots))
+
 def clean_logo(path):
     # The exported logo has semi-transparent speckles; keep only solid white shapes.
     im = Image.open(path).convert('RGBA')

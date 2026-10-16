@@ -1,17 +1,19 @@
-# OniDev Studio
+# Crumbslinger
 
-One-page indie game studio website, hosted on GitHub Pages. No build step or dependencies.
+One-page website for Crumbslinger, a one-person indie game studio, hosted on GitHub Pages. No build step or dependencies.
 
 ## Editing
 
-- `dist/content.js`: game descriptions, YouTube trailer URLs, Steam and Discord links, email, team members, screenshot lists.
+- `dist/content.js`: game descriptions, YouTube trailer URLs, Steam, Discord and press kit links, email, team member (photo, role, previous games), screenshot lists.
 - `dist/index.html`: section copy and navigation.
 - `dist/styles.css`: theme and responsive layout.
 - `dist/assets/`: local images and downloadable press kits. Add media here and reference it with a relative path.
 
-We Dig the Moon is the featured game, followed by Tankful. Its gallery uses the five approved Steam screenshots in order: `22.png`, `3.png`, `7.jpg`, `23.png`, `14.png`. Optimized WebP images and thumbnails live in `dist/assets/moon/`; the press kit includes the original screenshots and marketing artwork. `scripts/prepare-moon-assets.py` regenerates these assets from the local source folders using Pillow.
+The top of the page is a layered parallax hero for We Dig the Moon (`dist/assets/hero/`), followed by the studio games list. `scripts/prepare-crumbslinger-assets.py` regenerates the hero layers, studio logo, favicon and team photo from the `../We Dig the Moon` and `../Studio Crumbslinger` source folders (run with Pillow, e.g. `uv run --with pillow python scripts/prepare-crumbslinger-assets.py`). The We Dig the Moon press kit is hosted on Google Drive.
 
-The original studio theme and two-column game layout are retained, with We Dig the Moon first. The site respects reduced-motion preferences. Screenshot galleries support keyboard navigation, touch swipes, and Escape to close.
+The We Dig the Moon gallery uses the five approved Steam screenshots in order: `22.png`, `3.png`, `7.jpg`, `23.png`, `14.png`. Optimized WebP images and thumbnails live in `dist/assets/moon/`.
+
+The site respects reduced-motion preferences. Screenshot galleries support keyboard navigation, touch swipes, and Escape to close.
 
 ## Validation
 
@@ -21,9 +23,9 @@ Run `node --check dist/app.js`, `node --check dist/content.js`, and `node script
 
 GitHub Pages serves the `dist` directory through the workflow in `.github/workflows/pages.yml` on pushes to `main`.
 
-## Custom domain later
+## Domain
 
-Set the domain in the repository's **Settings → Pages → Custom domain**, configure its DNS as instructed by GitHub, and enable HTTPS. Relative asset paths support the current project URL and a future domain.
+The site is served at https://crumbslinger.com (set in **Settings → Pages → Custom domain**). DNS for crumbslinger.com and oniindie.dev is on Cloudflare: crumbslinger.com points to GitHub Pages (DNS only), and oniindie.dev 301-redirects to crumbslinger.com via a Cloudflare Redirect Rule.
 
 ## Preview
 

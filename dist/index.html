@@ -12,41 +12,82 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101118">
-  <meta name="description" content="OniDev Studio — independent games. Discover We Dig the Moon and Tankful: Aquarium Shop Simulator.">
-  <title>OniDev Studio — Independent games</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e1f">
+  <meta name="description" content="Crumbslinger — a one-person indie game studio. Wishlist We Dig the Moon, a co-op lunar mining adventure for 1–4 players.">
+  <meta property="og:title" content="We Dig the Moon — Crumbslinger">
+  <meta property="og:description" content="Co-op lunar mining for 1–4 players. Wishlist on Steam.">
+  <meta property="og:image" content="assets/moon/header.webp">
+  <title>Crumbslinger — We Dig the Moon</title>
+  <link rel="icon" href="assets/studio/favicon.png" type="image/png">
+  <link rel="preload" as="image" href="assets/hero/background.webp">
   <link rel="stylesheet" href="styles.css">
   <script src="content.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#games" aria-label="OniDev Studio home"><img class="studio-logo" src="assets/studio-logo.png" alt=""><span>oni<span class="brand-light">dev</span><small>INDEPENDENT GAME STUDIO</small></span></a>
-    <nav aria-label="Main navigation"><a class="active" href="#games">Games</a><a href="#team">Team</a><a href="#contacts">Contacts</a><a href="#social">Social media</a></nav>
+    <a class="brand" href="#moon" aria-label="Crumbslinger home"><img src="assets/studio/icon.webp" alt="" width="240" height="191"><span>Crumbslinger</span></a>
+    <nav aria-label="Main navigation"><a href="#moon">We Dig the Moon</a><a href="#games">Games</a><a href="#team">Team</a><a href="#contacts">Contacts</a></nav>
+    <a class="header-cta" href="https://store.steampowered.com/app/5436920/We_Dig_the_Moon/" target="_blank" rel="noopener noreferrer">Wishlist</a>
   </header>
   <main>
-    <section class="screen games-screen" id="games" aria-labelledby="games-title">
-      <div class="section-intro"><div><p class="eyebrow">SMALL STUDIO. NEW WORLDS.</p><h1 id="games-title">OniDev <span>Studio</span><span class="title-period">.</span></h1></div><p class="intro-note">Independent games.<br>Made to be played together.</p></div>
+    <section class="hero" id="moon" aria-labelledby="hero-title">
+      <div class="hero-scene" aria-hidden="true">
+        <img class="layer layer-bg" src="assets/hero/background.webp" alt="" data-depth="6">
+        <img class="layer layer-ufo" src="assets/hero/ufo.webp" alt="" data-depth="14">
+        <img class="layer layer-back" src="assets/hero/astronaut-back.webp" alt="" data-depth="22">
+        <img class="layer layer-front" src="assets/hero/astronaut-front.webp" alt="" data-depth="34">
+        <img class="layer layer-ground" src="assets/hero/ground.webp" alt="" data-depth="12">
+      </div>
+      <div class="hero-content">
+        <h1 id="hero-title"><img src="assets/hero/title.webp" alt="We Dig the Moon" width="1100" height="797"></h1>
+        <p class="ribbon"><span>Wishlist now on Steam!</span></p>
+        <p class="hero-tagline">Co-op lunar mining for 1–4 players</p>
+        <div class="hero-actions">
+          <button class="hero-button outline" type="button" data-trailer-modal="0">Trailer</button>
+          <a class="hero-button fill" href="https://store.steampowered.com/app/5436920/We_Dig_the_Moon/" target="_blank" rel="noopener noreferrer">Wishlist</a>
+        </div>
+        <div class="hero-links">
+          <a href="https://store.steampowered.com/app/5436920/We_Dig_the_Moon/" target="_blank" rel="noopener noreferrer">Steam</a>
+          <a href="https://discord.gg/DyczvHPda" target="_blank" rel="noopener noreferrer">Discord</a>
+          <a href="https://drive.google.com/drive/folders/1sqNcdDFJzDMRJmg5gCC0Cc3yV6TiRRjZ?usp=sharing" target="_blank" rel="noopener noreferrer">Press kit</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#games">Our games <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="section games-section" id="games" aria-labelledby="games-title">
+      <div class="section-head"><p class="eyebrow">Crumbslinger games</p><h2 id="games-title">Our games</h2></div>
       <div class="games-grid" id="games-grid"></div>
-      <div class="section-bottom"><span>Two worlds. One independent spirit.</span><a href="#team">Meet the studio <span aria-hidden="true">↓</span></a></div>
     </section>
-    <section class="screen team-screen" id="team" aria-labelledby="team-title">
-      <p class="eyebrow">01 / THE PEOPLE BEHIND THE GAMES</p>
-      <div class="section-layout"><div><h2 id="team-title">Small team.<br><span>Shared imagination.</span></h2><p class="section-copy">We’re OniDev Studio, an independent game studio working on We Dig the Moon and Tankful: Aquarium Shop Simulator.</p></div><div class="studio-panel"><span class="large-wordmark">oni<span>dev</span><i>.</i></span><div class="panel-rule"></div><p>Independent game development</p><p class="muted">From an aquarium shop to the surface of the Moon.</p><div id="team-members"></div></div></div>
-      <div class="section-bottom"><span>OniDev Studio</span><a href="#contacts">Get in touch <span aria-hidden="true">↓</span></a></div>
+
+    <section class="section team-section" id="team" aria-labelledby="team-title">
+      <div class="team-layout">
+        <div class="team-copy">
+          <p class="eyebrow">The studio</p>
+          <h2 id="team-title">One developer.<br><span>Every crumb.</span></h2>
+          <p class="section-copy">Crumbslinger is a one-person indie studio. Every game here is designed, coded and shipped by one developer who loves co-op chaos and games you play with friends.</p>
+        </div>
+        <div id="team-members"></div>
+      </div>
     </section>
-    <section class="screen contacts-screen" id="contacts" aria-labelledby="contacts-title">
-      <p class="eyebrow">02 / SAY HELLO</p>
-      <div class="section-layout"><div><h2 id="contacts-title">Let’s start<br><span>a conversation.</span></h2><p class="section-copy">Questions about our games? Join our game communities. For screenshots and game artwork, download our press kits.</p></div><div class="contact-links" id="contact-links"><a class="contact-row" href="https://discord.gg/DyczvHPda" target="_blank" rel="noopener noreferrer"><span><small>COMMUNITY</small>We Dig the Moon Discord</span><span aria-hidden="true">↗</span></a><a class="contact-row" href="assets/moon-press-kit.zip" download><span><small>PRESS & CREATORS</small>We Dig the Moon press kit</span><span aria-hidden="true">↓</span></a><a class="contact-row" href="https://discord.gg/2yaQjbuj8j" target="_blank" rel="noopener noreferrer"><span><small>COMMUNITY</small>Tankful Discord</span><span aria-hidden="true">↗</span></a><a class="contact-row" href="assets/tankful-press-kit.zip" download><span><small>PRESS & CREATORS</small>Tankful press kit</span><span aria-hidden="true">↓</span></a></div></div>
-      <div class="section-bottom"><span>Thanks for stopping by.</span><a href="#social">Stay connected <span aria-hidden="true">↓</span></a></div>
-    </section>
-    <section class="screen social-screen" id="social" aria-labelledby="social-title">
-      <p class="eyebrow">03 / KEEP IN TOUCH</p><h2 id="social-title">See you<br><span>in the next world.</span></h2>
-      <div class="social-links"><a href="https://store.steampowered.com/app/5436920/We_Dig_the_Moon/" target="_blank" rel="noopener noreferrer"><small>FOLLOW THE GAME</small><span>Steam <i aria-hidden="true">↗</i></span></a><a href="https://discord.gg/DyczvHPda" target="_blank" rel="noopener noreferrer"><small>JOIN THE COMMUNITY</small><span>Discord <i aria-hidden="true">↗</i></span></a><a href="https://youtu.be/Hd3sjt1mLx0" target="_blank" rel="noopener noreferrer"><small>WATCH THE TRAILER</small><span>YouTube <i aria-hidden="true">↗</i></span></a></div>
-      <footer class="section-bottom"><span>© <span id="year"></span> OniDev Studio</span><a href="#games">Back to top <span aria-hidden="true">↑</span></a></footer>
+
+    <section class="section contacts-section" id="contacts" aria-labelledby="contacts-title">
+      <div class="section-head"><p class="eyebrow">Say hello</p><h2 id="contacts-title">Contacts</h2></div>
+      <div class="contact-links" id="contact-links">
+        <a class="contact-row" href="https://discord.gg/DyczvHPda" target="_blank" rel="noopener noreferrer"><span><small>Community</small>We Dig the Moon Discord</span><span aria-hidden="true">↗</span></a>
+        <a class="contact-row" href="https://drive.google.com/drive/folders/1sqNcdDFJzDMRJmg5gCC0Cc3yV6TiRRjZ?usp=sharing" target="_blank" rel="noopener noreferrer"><span><small>Press &amp; creators</small>We Dig the Moon press kit</span><span aria-hidden="true">↗</span></a>
+        <a class="contact-row" href="https://discord.gg/2yaQjbuj8j" target="_blank" rel="noopener noreferrer"><span><small>Community</small>Tankful Discord</span><span aria-hidden="true">↗</span></a>
+        <a class="contact-row" href="assets/tankful-press-kit.zip" download><span><small>Press &amp; creators</small>Tankful press kit</span><span aria-hidden="true">↓</span></a>
+      </div>
     </section>
   </main>
+  <footer class="site-footer">
+    <img src="assets/studio/logo.webp" alt="Crumbslinger" width="640" height="600">
+    <div class="footer-links"><a href="https://store.steampowered.com/app/5436920/We_Dig_the_Moon/" target="_blank" rel="noopener noreferrer">Steam</a><a href="https://discord.gg/DyczvHPda" target="_blank" rel="noopener noreferrer">Discord</a><a href="https://youtu.be/e6Fhu8Gu5eg" target="_blank" rel="noopener noreferrer">YouTube</a></div>
+    <p>© <span id="year"></span> Crumbslinger · <a href="#moon">Back to top ↑</a></p>
+  </footer>
+  <dialog id="trailer" class="trailer-dialog" aria-label="Trailer"><button class="icon-button" id="trailer-close" aria-label="Close trailer">×</button><div class="trailer-frame"></div></dialog>
   <dialog id="gallery" aria-labelledby="gallery-title"><div class="gallery-top"><div><p id="gallery-title"></p><span id="gallery-count"></span></div><button class="icon-button" id="gallery-close" aria-label="Close gallery">×</button></div><div class="gallery-stage"><button class="icon-button gallery-prev" aria-label="Previous screenshot">‹</button><img id="gallery-image" alt=""><button class="icon-button gallery-next" aria-label="Next screenshot">›</button></div><p class="gallery-hint">Use ← → to browse · Esc to close</p></dialog>
 </body>
 </html>

@@ -10,8 +10,8 @@ runInNewContext(readFileSync(resolve(root, 'content.js'), 'utf8'), context);
 const { games } = context.window.STUDIO;
 const assets = new Set([...html.matchAll(/(?:src|href)="([^"#]+)"/g)].map(match => match[1]).filter(path => !/^https?:/.test(path)));
 for (const game of games) {
-  for (const path of [game.cover, game.pressKit, ...game.screenshots, ...(game.thumbnails || [])]) assets.add(path);
-  for (const link of [game.steam, game.discord]) {
+  for (const path of [game.cover, game.pressKit, ...game.screenshots, ...(game.thumbnails || [])]) if (!/^https:/.test(path)) assets.add(path);
+  for (const link of [game.steam, game.discord, game.trailer].filter(Boolean)) {
     if (new URL(link).protocol !== 'https:') throw new Error(`Invalid game link: ${link}`);
   }
 }
@@ -20,5 +20,5 @@ for (const asset of assets) {
   if (!existsSync(path) || !statSync(path).size) throw new Error(`Missing or empty asset: ${asset}`);
 }
 if (games[0].id !== 'moon' || games[0].screenshots.length !== 5) throw new Error('We Dig the Moon must lead with five approved screenshots.');
-if (/How to Digging/.test(html + JSON.stringify(games))) throw new Error('Outdated game name.');
+if (/How to Digging|OniDev/.test(html + JSON.stringify(games))) throw new Error('Outdated game or studio name.');
 console.log(`Site ready: ${games.length} games, ${assets.size} local files verified.`);
